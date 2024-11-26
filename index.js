@@ -68,7 +68,7 @@ app.post("/api/persons", (request, response) => {
     }
 
     const id = Math.round(Math.random() * Number.MAX_SAFE_INTEGER);
-    person.id = id;
+    person.id = `${id}`;
 
     if (phonebook.find((p) => p.id != id)) {
         if (phonebook.find((p) => p.name == person.name)) {
